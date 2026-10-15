@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eCL Configuration Tool</title>
+<meta name="description" content="Download the eCL Configuration Tool for Mac or Windows.">
+<meta property="og:title" content="eCL Configuration Tool">
+<meta property="og:description" content="eCatholic has shared the eCL Configuration Tool with you.">
+<meta property="og:image" content="https://sras2024.github.io/ecl-configuration-tool/icon-512.png">
+<link rel="icon" type="image/png" href="icon-64.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+  :root {
+    --charcoal: #1c1d20; --charcoal-lo: #161719; --surface: #26272b;
+    --button: #3a3c41; --button-hi: #46484e;
+    --ivory: #f5f0e2; --ivory-2: rgba(245, 240, 226, .66); --ivory-3: rgba(245, 240, 226, .42);
+    --hair: rgba(245, 240, 226, .09); --accent: #ee7623;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; min-height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 40px 20px;
+    background: radial-gradient(900px 560px at 50% 30%, rgba(245, 240, 226, .045), transparent 70%),
+                linear-gradient(180deg, var(--charcoal), var(--charcoal-lo));
+    color: var(--ivory);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI Variable Text", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+  }
+  .card { width: 100%; max-width: 520px; }
+  .icon { width: 128px; height: 128px; display: block; margin: 0 auto 26px; filter: drop-shadow(0 18px 30px rgba(0,0,0,.5)); }
+  .eyebrow { margin: 0 0 8px; font-size: 11.5px; font-weight: 650; letter-spacing: .2em; text-transform: uppercase; color: var(--ivory-3); }
+  h1 { margin: 0; font-size: 32px; line-height: 1.15; font-weight: 300; letter-spacing: -.015em; }
+  .lede { margin: 12px auto 30px; max-width: 420px; color: var(--ivory-2); font-size: 15px; }
+  .buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .dl {
+    display: inline-flex; align-items: center; gap: 11px;
+    min-width: 200px; height: 56px; padding: 0 26px 0 22px;
+    border-radius: 15px; text-decoration: none;
+    background: linear-gradient(180deg, var(--button-hi), var(--button));
+    color: var(--ivory); font-size: 16px; font-weight: 600;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.09), 0 1px 2px rgba(0,0,0,.4), 0 10px 30px -8px rgba(0,0,0,.55);
+    transition: filter .18s, transform .12s;
+  }
+  .dl:hover { filter: brightness(1.1); }
+  .dl:active { transform: scale(.975); }
+  .dl svg { width: 22px; height: 22px; flex: none; fill: var(--ivory); }
+  .dl small { display: block; font-size: 11.5px; font-weight: 500; color: var(--ivory-3); margin-top: -2px; }
+  .dl.primary { box-shadow: inset 0 0 0 1.5px rgba(238, 118, 35, .75), inset 0 1px 0 rgba(255,255,255,.09), 0 10px 30px -8px rgba(0,0,0,.55); }
+  .status { min-height: 22px; margin: 22px 0 0; font-size: 13.5px; color: var(--ivory-2); }
+  .status a { color: var(--accent); }
+  .help { margin: 34px auto 0; max-width: 460px; padding: 16px 18px; border-radius: 14px; background: var(--surface);
+          box-shadow: inset 0 0 0 1px var(--hair); text-align: left; font-size: 13.5px; color: var(--ivory-2); }
+  .help h2 { margin: 0 0 6px; font-size: 13px; font-weight: 650; color: var(--ivory); letter-spacing: .01em; }
+  .help p { margin: 0; }
+  .help[hidden] { display: none; }
+  footer { margin-top: 40px; font-size: 12px; color: var(--ivory-3); }
+  footer img { height: 15px; vertical-align: -3px; opacity: .8; margin-right: 6px; }
+</style>
+</head>
+<body>
+<main class="card">
+  <img class="icon" src="icon-512.png" alt="Configuration Tool">
+  <p class="eyebrow">eCatholic · eCL</p>
+  <h1>Configuration Tool</h1>
+  <p class="lede">Finds the Magewell Ultra Stream and Pro Convert HDMI and SDI encoders on your network and shows each one’s IP address.</p>
+
+  <div class="buttons">
+    <a class="dl" id="mac" href="https://github.com/SRAS2024/ecl-configuration-tool/releases/latest/download/Configuration-Tool-macOS.zip">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.21 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.67-2.15.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.35-3.54zM14.2 6.13c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23z"/></svg>
+      <span>MacOS<small>macOS 14 or later</small></span>
+    </a>
+    <a class="dl" id="win" href="https://github.com/SRAS2024/ecl-configuration-tool/releases/latest/download/Configuration-Tool-Windows.exe">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.3 10.2 4.3v7.1H3zM11.1 4.2 21 2.8v8.6h-9.9zM3 12.3h7.2v7.1L3 18.4zM11.1 12.3H21v8.6l-9.9-1.4z"/></svg>
+      <span>Windows<small>Windows 10 or 11</small></span>
+    </a>
+  </div>
+
+  <p class="status" id="status" aria-live="polite"></p>
+
+  <div class="help" id="helpMac" hidden>
+    <h2>Opening it on a Mac</h2>
+    <p>Safari unzips the download for you; in Chrome, double-click the zip in Downloads. Then open <b>Configuration Tool</b> — it’s signed and notarized by Apple. The first time you search, allow it to find devices on your local network.</p>
+  </div>
+  <div class="help" id="helpWin" hidden>
+    <h2>Opening it on Windows</h2>
+    <p>Open <b>Configuration-Tool-Windows.exe</b> from your Downloads. If Windows shows “Windows protected your PC”, click <b>More info</b>, then <b>Run anyway</b>. If your browser asks whether to keep the file, choose <b>Keep</b>.</p>
+  </div>
+</main>
+<footer>eCatholic · Configuration Tool</footer>
+
+<script>
+  (function () {
+    var ua = navigator.userAgent || '';
+    var touchMac = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1; // iPad asking for the desktop site
+    var os = /Windows/.test(ua) ? 'win' : (/Macintosh|Mac OS X/.test(ua) && !touchMac) ? 'mac' : 'other';
+    var status = document.getElementById('status');
+    if (os === 'other') {
+      status.textContent = 'Open this page on your Mac or Windows PC to download Configuration Tool.';
+      return;
+    }
+    var link = document.getElementById(os);
+    link.classList.add('primary');
+    document.getElementById(os === 'mac' ? 'helpMac' : 'helpWin').hidden = false;
+    // Start the download for this computer right away — only when arriving from a link (not on reloads).
+    var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    if (!nav || nav.type !== 'reload') {
+      status.innerHTML = 'Your download is starting… If it doesn’t, <a href="' + link.href + '">click here</a>.';
+      setTimeout(function () { window.location.href = link.href; }, 500);
+    }
+  })();
+</script>
+</body>
+</html>
